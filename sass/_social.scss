@@ -1,0 +1,22 @@
+.social .link {
+  display: block;
+  height: 44px;
+}
+
+.social .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social .icon {
+  fill: $icon-color;
+  border-radius: 50%;
+
+  transition: fill 250ms $cubic, background-color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    fill: $primery-bg-color;
+    background-color: $accent-color;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,36 @@
+.main-activity {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.activity {
+  display: flex;
+
+  .item {
+    position: relative;
+
+    border-radius: 4px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.activity-text {
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 370px;
+
+  color: $acent-text-color;
+  background-color: $hero-bg-color;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}

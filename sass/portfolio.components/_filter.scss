@@ -1,0 +1,33 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  .item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.filter-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0;
+  cursor: pointer;
+
+  color: $headlines-text-color;
+  background-color: $secondary-bg-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  transition: color 250ms $cubic, background-color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    color: $acent-text-color;
+    background-color: $accent-color;
+  }
+}

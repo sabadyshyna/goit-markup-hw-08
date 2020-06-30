@@ -1,0 +1,41 @@
+.main-features {
+  padding-top: 94px;
+}
+
+.features {
+  display: flex;
+  padding-bottom: 94px;
+  border-bottom: 1px solid #ececec;
+
+  .item {
+    width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.bg-icon {
+  display: flex;
+  background-color: $secondary-bg-color;
+  height: 120px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
