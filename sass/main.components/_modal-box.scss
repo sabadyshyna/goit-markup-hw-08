@@ -19,9 +19,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
+  // display: flex;
   flex-direction: column;
-  max-width: 528px;
+  // max-width: 528px;
   padding: 40px;
   background-color: $primery-bg-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -151,7 +151,7 @@
 }
 
 .modal .agreement {
-  display: flex;
+  // display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;

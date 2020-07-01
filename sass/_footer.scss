@@ -3,7 +3,7 @@
 }
 
 .footer-flex {
-  display: flex;
+  // display: flex;
   align-items: baseline;
   justify-content: space-between;
   padding-top: 48px;
@@ -51,9 +51,9 @@
   }
 }
 
-.join .list {
-  display: flex;
-}
+// .join .list {
+//   display: flex;
+// }
 
 .join .item:not(:last-child) {
   margin-right: 10px;
@@ -77,13 +77,13 @@
   }
 }
 
-.subscribe-form {
-  display: flex;
-}
+// .subscribe-form {
+//   display: flex;
+// }
 
 .subscribe-input {
   margin-right: 12px;
-  min-width: 358px;
+  // min-width: 358px;
   padding: 18px 12px;
 
   background-color: $fooetr-bg-color;
@@ -105,7 +105,7 @@
 }
 
 .subscribe .button {
-  display: flex;
+  // display: flex;
   align-items: center;
 }
 

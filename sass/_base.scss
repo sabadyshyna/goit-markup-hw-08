@@ -53,7 +53,69 @@ img {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  // min-width: 200px;
+  border: 0;
+  cursor: pointer;
+
+  color: $acent-text-color;
+  background-color: $accent-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  transition: color 250ms $cubic, background-color 250ms $cubic;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+    background-color: $primery-bg-color;
+
+    .icon {
+      fill: $accent-color;
+    }
+  }
+}
+
+// .logo {
+//   color: $accent-color;
+
+//   font-family: Raleway, sans-serif;
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.2;
+//   font-style: normal;
+// }
+// .sub-logo {
+//   color: $logo-black-color;
+// }
+
+// .footer-logo {
+//   color: $acent-text-color;
+
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 22px;
+//   line-height: 1.2;
+// }

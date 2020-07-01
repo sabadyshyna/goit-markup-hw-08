@@ -3,12 +3,12 @@
 }
 
 .features {
-  display: flex;
+  // display: flex;
   padding-bottom: 94px;
   border-bottom: 1px solid #ececec;
 
   .item {
-    width: 270px;
+    // width: 270px;
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -32,7 +32,7 @@
 }
 
 .bg-icon {
-  display: flex;
+  // display: flex;
   background-color: $secondary-bg-color;
   height: 120px;
   border-radius: 4px;

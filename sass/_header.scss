@@ -1,11 +1,11 @@
 .header,
 .nav {
-  display: flex;
+  // display: flex;
   align-items: center;
 }
 
 .site-nav {
-  display: flex;
+  // display: flex;
   margin-left: 80px;
 
   .item:not(:last-child) {
@@ -48,11 +48,11 @@
 }
 
 .address-nav {
-  display: inline-flex;
+  // display: inline-flex;
   margin-left: auto;
 
   .link {
-    display: inline-flex;
+    // display: inline-flex;
     align-items: center;
 
     color: $primery-text-color;
