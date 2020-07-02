@@ -1,17 +1,41 @@
 .main-features {
-  padding-top: 94px;
+  padding-top: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+  }
 }
 
 .features {
-  // display: flex;
-  padding-bottom: 94px;
-  border-bottom: 1px solid #ececec;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 94px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -15px;
+  }
 
   .item {
-    // width: 270px;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+
+      margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 4 * 30px) / 4);
     }
   }
 
@@ -19,6 +43,7 @@
     margin-top: 30px;
     margin-bottom: 10px;
 
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -32,7 +57,7 @@
 }
 
 .bg-icon {
-  // display: flex;
+  display: flex;
   background-color: $secondary-bg-color;
   height: 120px;
   border-radius: 4px;

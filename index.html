@@ -23,9 +23,17 @@
     <header class="page-header">
       <div class="container header">
         <nav class="nav">
-          <a href="./index.html">
-            <img src="./img/header-logo.svg" alt="WebStudio" width="152" height="20"></a>
+          <a href="./index.html" class="header-logo">
+            <img src="./img/header-logo-mobile&tablet.svg" alt="WebStudio" width="152" height="20"></a>
+          
+          <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button="">
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+              <use class="icon-cross" href="./img/sprite.svg#cross"></use>
+            </svg>
+          </button>
 
+        <div class="menu-container" id="menu-container" data-menu>
           <ul class="site-nav list">
             <li class="item"><a href="./index.html" class="link current">Студия</a></li>
             <li class="item">
@@ -33,18 +41,17 @@
             </li>
             <li class="item"><a href="#" class="link">Контакты</a></li>
           </ul>
-        </nav>
 
-        <address class="address-nav">
-          <a href="mailto:info@devstudio.com" class="link"
-            ><svg class="icon" width="15" height="10">
-              <use href="./img/sprite.svg#email"></use>
-            </svg>info@devstudio.com</a>
-          <a href="tel:+380961111111" class="link"
-            ><svg class="icon" width="10" height="15">
-              <use href="./img/sprite.svg#phone"></use>
-            </svg>+38 096 111 11 11</a>
-        </address>
+          <address class="address-nav">
+            <a href="mailto:info@devstudio.com" class="link"><svg class="icon" width="15" height="10">
+                <use href="./img/sprite.svg#email"></use>
+              </svg>info@devstudio.com</a>
+            <a href="tel:+380961111111" class="link"><svg class="icon" width="10" height="15">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>+38 096 111 11 11</a>
+          </address>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -120,30 +127,18 @@
 
           <ul class="activity list">
             <li class="item">
-              <img
-                src="./img/desktop-apps.jpg"
-                width="370"
-                height="294"
-                alt="Десктопные приложения"
-              />
+              <img srcset="./img/desktop-apps.jpg 1x, ./img/desktop-apps-2x.jpg 2x" 
+                   src="./img/design-solutions.jpg" alt="design solutions" width="370"/>
               <p class="activity-text">Десктопные приложения</p>
             </li>
             <li class="item">
-              <img
-                src="./img/mobile-apps.jpg"
-                width="370"
-                height="294"
-                alt="Мобильные приложения"
-              />
+              <img srcset="./img/mobile-apps.jpg 1x, ./img/mobile-apps-2x.jpg 2x" src="./img/design-solutions.jpg"
+                alt="design solutions" width="370" />
               <p class="activity-text">Мобильные приложения</p>
             </li>
             <li class="item">
-              <img
-                src="./img/design-solutions.jpg"
-                width="370"
-                height="294"
-                alt="Дизайнерские решения"
-              />
+              <img srcset="./img/design-solutions.jpg 1x, ./img/design-solutions-2x.jpg 2x" src="./img/design-solutions.jpg"
+                alt="design solutions" width="370" />
               <p class="activity-text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -157,12 +152,15 @@
 
           <ul class="worker list">
             <li class="item">
-              <img
-                src="./img/john-smith.jpg"
-                width="270"
-                height="260"
-                alt="Джон Смит"
-              />
+              <picture>
+                <source srcset="./img/john-smith-mobile.jpg 1x, ./img/john-smith-mobile-2x.jpg 2x" media="(max-width: 767px)" />
+              
+                <source srcset="./img/john-smith-desktop.jpg 1x, ./img/john-smith-desktop-2x.jpg 2x" media="(min-width: 1200px)" />
+              
+                <source srcset="./img/john-smith-tablet.jpg 1x, ./img/john-smith-tablet-2x.jpg 2x" media="(min-width: 768px)" />
+              
+                <img src="./img/john-smith-tablet.jpg" alt="John Smith" />
+              </picture>
               <h3 class="title worker-title" lang="en">John Smith</h3>
               <p class="text" lang="en">Product Designer</p>
               <ul class="social list">
@@ -193,12 +191,15 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./img/marta-stewart.jpg"
-                width="270"
-                height="260"
-                alt="Марта Стюарт"
-              />
+              <picture>
+                <source srcset="./img/marta-stewart-mobile.jpg 1x, ./img/marta-stewart-mobile-2x.jpg 2x" media="(max-width: 767px)" />
+              
+                <source srcset="./img/marta-stewart-desktop.jpg 1x, ./img/marta-stewart-desktop-2x.jpg 2x" media="(min-width: 1200px)" />
+              
+                <source srcset="./img/marta-stewart-tablet.jpg 1x, ./img/marta-stewart-tablet-2x.jpg 2x" media="(min-width: 768px)" />
+              
+                <img src="./img/marta-stewart-tablet.jpg" alt="Marta Stewart" />
+              </picture>
               <h3 class="title worker-title" lang="en">Marta Stewart</h3>
               <p class="text" lang="en">Frontend Developer</p>
               <ul class="social list">
@@ -225,12 +226,16 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./img/robert-jakis.jpg"
-                width="270"
-                height="260"
-                alt="Роберт Якис"
-              />
+              <picture>
+                <source srcset="./img/robert-jakis-mobile.jpg 1x, ./img/robert-jakis-mobile-2x.jpg 2x" media="(max-width: 767px)" />
+              
+                <source srcset="./img/robert-jakis-desktop.jpg 1x, ./img/robert-jakis-desktop-2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+              
+                <source srcset="./img/robert-jakis-tablet.jpg 1x, ./img/robert-jakis-tablet-2x.jpg 2x" media="(min-width: 768px)" />
+              
+                <img src="./img/robert-jakis-tablet.jpg" alt="Robert Jakis" />
+              </picture>
               <h3 class="title worker-title" lang="en">Robert Jakis</h3>
               <p class="text" lang="en">Marketing</p>
               <ul class="social list">
@@ -257,12 +262,16 @@
               </ul>
             </li>
             <li class="item">
-              <img
-                src="./img/martin-doe.jpg"
-                width="270"
-                height="260"
-                alt="Мартин Доу"
-              />
+              <picture>
+                <source srcset="./img/martin-doe-mobile.jpg 1x, ./img/martin-doe-mobile-2x.jpg 2x" media="(max-width: 767px)" />
+              
+                <source srcset="./img/martin-doe-desktop.jpg 1x, ./img/martin-doe-desktop-2x.jpg 2x"
+                  media="(min-width: 1200px)" />
+              
+                <source srcset="./img/martin-doe-tablet.jpg 1x, ./img/martin-doe-tablet-2x.jpg 2x" media="(min-width: 768px)" />
+              
+                <img src="./img/martin-doe-tablet.jpg" alt="Martin-Doe" />
+              </picture>
               <h3 class="title worker-title" lang="en">Martin Doe</h3>
               <p class="text" lang="en">UI Designer</p>
               <ul class="social list">
@@ -392,43 +401,45 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-flex">
-          <address class="address">
-            <a href="./index.html">
-              <img src="./img/footer-logo.svg" alt="WebStudio" width="152" height="20"></a>
-            <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
-            <p class="footer-p">
-              <a href="mailto:info@devstudio.com" class="footer-address link">info@devstudio.com</a>
-            </p>
-            <p class="footer-p">
-              <a href="tel:+380961111111" class="footer-address link">+38 096 111 11 11</a>
-            </p>
-          </address>
-          
-          <div class="join">
-            <p class="footer-title">Присоединяйтесь</p>
-            <ul class="list">
-              <li class="item">
-                <a href="#" class="link" aria-label="Ссылка на Instagram"><svg class="icon" width="44" height="44">
-                    <use href="./img/sprite.svg#instagram"></use>
-                  </svg></a>
-              </li>
-              <li class="item">
-                <a href="#" class="link" aria-label="Ссылка на Twitter"><svg class="icon" width="44" height="44">
-                  <use href="./img/sprite.svg#twitter"></use>
-                </svg></a>
-              </li>
-              <li class="item">
-                <a href="#" class="link" aria-label="Ссылка на Facebook"><svg class="icon" width="44" height="44">
-                    <use href="./img/sprite.svg#facebook"></use>
-                  </svg></a>
-              </li>
-              <li class="item">
-                <a href="#" class="link" aria-label="Ссылка на LinkedIn"><svg class="icon" width="44" height="44">
-                  <use href="./img/sprite.svg#linkedin"></use>
-                </svg></a>
-              </li>
-            </ul>
+        <div class="footer-box">
+          <div class="tablet">
+            <address class="address">
+              <a href="./index.html" class="footer-logo">
+                <img src="./img/footer-logo-mobile&tablet.svg" alt="WebStudio" width="141" height="19"></a>
+              <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
+              <p class="footer-p">
+                <a href="mailto:info@devstudio.com" class="footer-address link">info@devstudio.com</a>
+              </p>
+              <p class="footer-p">
+                <a href="tel:+380961111111" class="footer-address link">+38 096 111 11 11</a>
+              </p>
+            </address>
+            
+            <div class="join">
+              <p class="footer-title">Присоединяйтесь</p>
+              <ul class="list">
+                <li class="item">
+                  <a href="#" class="link" aria-label="Ссылка на Instagram"><svg class="icon" width="44" height="44">
+                      <use href="./img/sprite.svg#instagram"></use>
+                    </svg></a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Ссылка на Twitter"><svg class="icon" width="44" height="44">
+                      <use href="./img/sprite.svg#twitter"></use>
+                    </svg></a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Ссылка на Facebook"><svg class="icon" width="44" height="44">
+                      <use href="./img/sprite.svg#facebook"></use>
+                    </svg></a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Ссылка на LinkedIn"><svg class="icon" width="44" height="44">
+                      <use href="./img/sprite.svg#linkedin"></use>
+                    </svg></a>
+                </li>
+              </ul>
+            </div>
           </div>
           
           <div class="subscribe">
@@ -446,6 +457,7 @@
       </div>
     </footer>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

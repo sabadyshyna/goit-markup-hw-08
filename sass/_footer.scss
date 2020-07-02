@@ -2,17 +2,39 @@
   background-color: $fooetr-bg-color;
 }
 
-.footer-flex {
-  // display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding-top: 48px;
-  padding-bottom: 21px;
+.footer-box {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .subscribe {
+    margin-left: auto;
+  }
+}
+
+.footer-logo {
+  display: block;
+
+  width: 141px;
+  height: 19px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $desktop) {
+    margin: 0px;
+  }
 }
 
 .footer-text {
-  margin-top: 10px;
+  margin-top: 20px;
 
   color: $acent-text-color;
 
@@ -22,7 +44,8 @@
 }
 
 .footer-title {
-  margin-bottom: 21px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 
   color: $acent-text-color;
 
@@ -30,10 +53,22 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+  }
 }
 
 .footer-p {
-  padding-top: 10px;
+  padding-top: 8px;
+
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+  }
 }
 
 .footer-address {
@@ -51,9 +86,17 @@
   }
 }
 
-// .join .list {
-//   display: flex;
-// }
+.join .list {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 0 107px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+  }
+}
 
 .join .item:not(:last-child) {
   margin-right: 10px;
@@ -77,14 +120,27 @@
   }
 }
 
-// .subscribe-form {
-//   display: flex;
-// }
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
 
 .subscribe-input {
-  margin-right: 12px;
-  // min-width: 358px;
+  display: block;
+  width: 100%;
   padding: 18px 12px;
+  max-height: 50px;
+
+  @media screen and (min-width: $desktop) {
+    min-width: 358px;
+    margin-right: 12px;
+  }
 
   background-color: $fooetr-bg-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -92,6 +148,11 @@
   border-radius: 4px;
   transition: border 250ms $cubic;
   outline: none;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    max-width: 450px;
+  }
 
   &:focus {
     border: 1px solid $accent-color;
@@ -105,8 +166,32 @@
 }
 
 .subscribe .button {
-  // display: flex;
+  display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: $tablet) {
+  .tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 60px;
+    padding-right: 75px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .tablet {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .tablet .join {
+    margin-left: 70px;
+  }
 }
 
 .subscribe .icon {

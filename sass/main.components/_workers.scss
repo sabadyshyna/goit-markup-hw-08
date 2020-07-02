@@ -1,12 +1,22 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   background-color: $secondary-bg-color;
 }
 
 .worker {
-  // display: flex;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    margin: -15px;
+  }
 
   > .item {
     border-radius: 4px;
@@ -15,8 +25,20 @@
       0px 1px 3px rgba(0, 0, 0, 0.12);
     overflow: hidden;
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 2);
+
+      margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 4 * 30px) / 4);
     }
   }
 
@@ -29,7 +51,7 @@
   }
 
   .social {
-    // display: flex;
+    display: flex;
     justify-content: center;
     padding-bottom: 24px;
   }

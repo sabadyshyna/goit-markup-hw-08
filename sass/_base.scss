@@ -19,10 +19,15 @@ p {
 
 h2 {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media sreen and (min-width: $desktop) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .title {
