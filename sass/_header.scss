@@ -23,6 +23,12 @@
   display: inline-block;
   margin-top: 16px;
   margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .menu-button {
@@ -117,6 +123,11 @@
     display: block;
     padding-bottom: 8px;
 
+    @media screen and (min-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
     color: $headlines-text-color;
 
     font-weight: 500;
@@ -175,6 +186,11 @@
     letter-spacing: 0.02em;
 
     transition: color 250ms $cubic;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 16px;

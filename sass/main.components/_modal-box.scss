@@ -7,6 +7,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms $cubic, transform 50ms $cubic;
 
+  overflow-y: scroll;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -19,14 +21,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // display: flex;
+  display: flex;
   flex-direction: column;
-  // max-width: 528px;
   padding: 40px;
   background-color: $primery-bg-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
 
   .header {
     font-weight: bold;
@@ -151,7 +156,7 @@
 }
 
 .modal .agreement {
-  // display: flex;
+  display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -159,8 +164,12 @@
 }
 
 .text-agreement {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
 }
 
 .check {
